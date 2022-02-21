@@ -39,20 +39,20 @@ public class Robot extends TimedRobot {
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
 
   // Drive motor declarations, numbers need checked
-  WPI_VictorSPX FRMotor = new WPI_VictorSPX(1);
-  WPI_VictorSPX BRMotor = new WPI_VictorSPX(2);
-  WPI_VictorSPX FLMotor = new WPI_VictorSPX(3);
-  WPI_VictorSPX BLMotor = new WPI_VictorSPX(4);
+  WPI_VictorSPX FRMotor = new WPI_VictorSPX(2);
+  WPI_VictorSPX BRMotor = new WPI_VictorSPX(3);
+  WPI_VictorSPX FLMotor = new WPI_VictorSPX(9);
+  WPI_VictorSPX BLMotor = new WPI_VictorSPX(5);
 
   //TODO: these aren't correct
-  WPI_VictorSPX TCMotor = new WPI_VictorSPX(5); //top collector motor
-  WPI_VictorSPX BCMotor = new WPI_VictorSPX(6); //bottom collector motor
+  WPI_VictorSPX TCMotor = new WPI_VictorSPX(6); //top collector motor
+  WPI_VictorSPX BCMotor = new WPI_VictorSPX(10); //bottom collector motor
   WPI_VictorSPX ACTMotor = new WPI_VictorSPX(7); //articulating climber top
   WPI_VictorSPX ACBMotor = new WPI_VictorSPX(11); //articulating climber bottom
 
-  WPI_VictorSPX FCMotor = new WPI_VictorSPX(9);
+  
 
-  CANSparkMax SMotor = new CANSparkMax(10, MotorType.kBrushless);
+  CANSparkMax SMotor = new CANSparkMax(1, MotorType.kBrushless);
 
   private MotorControllerGroup m_LeftMotors = new MotorControllerGroup(FLMotor, BLMotor);
   private MotorControllerGroup m_RightMotors = new MotorControllerGroup(FRMotor, BRMotor);
